@@ -1,0 +1,6 @@
+[Unit]
+Description=Run pre-reboot signing script after OSTree deployment
+
+[Service]
+Type=oneshot
+ExecStart=/etc/ublue-os/pre-reboot-sign.sh
