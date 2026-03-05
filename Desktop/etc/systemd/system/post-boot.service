@@ -1,0 +1,14 @@
+[Unit]
+Description=Run post-reboot script after system boot
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/ublue-os/post-reboot.sh
+User=root
+Group=root
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
